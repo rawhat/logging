@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.3.0 - 2024-07-15
+
+- The `NO_COLOUR` or `NO_COLOR` environment variable can now be used to disable
+  colourful logging.
+
 ## v1.2.0 - 2024-06-20
 
 - Add `set_level` function to allow configuring log visibility.

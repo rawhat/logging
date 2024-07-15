@@ -17,11 +17,20 @@ configure() ->
     nil.
 
 is_colored_output() ->
-    case os:getenv("NO_COLOR") of
-        false -> true;
-        "false" -> true;
-        "" -> true;
-        _ -> false
+    not (
+        envvar_enabled("NO_COLOUR", false)
+        orelse envvar_enabled("NO_COLOR", false)
+    ).
+
+envvar_enabled(Name, Default) ->
+    case os:getenv(Name) of
+        % Not set, use default
+        false -> Default;
+        % Set to a false value
+        "" -> false;
+        "false" -> false;
+        % Otherwise it is enabled
+        _ -> true
     end.
 
 format(#{level := Level, msg := Msg, meta := _Meta}, Config) ->
