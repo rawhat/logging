@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Specifies the `logger` application to start as an `extra_application`
+
 ## v1.3.0 - 2024-07-15
 
 - The `NO_COLOUR` or `NO_COLOR` environment variable can now be used to disable
