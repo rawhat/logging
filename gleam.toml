@@ -8,6 +8,9 @@ links = [
   { title = "Sponsor", href = "https://github.com/sponsors/lpil" },
 ]
 
+[erlang]
+extra_applications = ["logger"]
+
 [dependencies]
 gleam_stdlib = "~> 0.34 or ~> 1.0"
 
